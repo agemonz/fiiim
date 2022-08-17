@@ -223,8 +223,9 @@ h1{
     justify-content: center;
     align-items: flex-end;
     gap:15px;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 600;
+    font-family: noto-sans-condensed,sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 31px;
     line-height: 100%;
     color: var(--color-white);
@@ -368,8 +369,10 @@ h1{
     color: var(--color-white);
 }
 .feature h2{
-    font-weight: 600;
     font-size: 33px;
+    font-family: noto-sans-condensed,sans-serif;
+    font-weight: 700;
+    font-style: normal;
     line-height: 120%;
     color: var(--color-black);
 }
