@@ -369,15 +369,25 @@ h1{
 }
 .feature h2{
     font-weight: 500;
-    font-size: 38px;
+    font-size: 33px;
     line-height: 120%;
     color: var(--color-black);
 }
 .feature-ttl{
     padding-bottom: 35px;
+    padding-left: 65px;
 }
 .feature-ttl img{
     width:55px;
+}
+.feature-ttl span{
+    position: relative;
+}
+.feature-ttl span::before{
+    position: absolute;
+    content: url(img/moviemark2.svg);
+    top:0px;
+    left:-65px;
 }
 .feature p{
     max-width:500px;
@@ -389,8 +399,8 @@ h1{
     width: 80%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding:40px 0;
+    justify-content: space-between;
+    padding:40px 70px;
 }
 
 .feature-1{
