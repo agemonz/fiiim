@@ -18,8 +18,6 @@ img{
 body{
     font-family: "Noto Sans JP";/*仮*/
     color: var(--color-black);
-    display: flex;
-    flex-direction: column;
 }
 
 .wrapper{
@@ -155,11 +153,15 @@ body{
 }
 
 .menu-txt{
+    font-family: ab-hanamaki ,sans-serif;
+    font-weight: 400;
     font-size: 50px;
+    letter-spacing: 7%;
     /* margin-bottom: 10px; */
 }
 .menu-subtxt{
     font-size: 20px;
+    letter-spacing: 3%;
 }
 
 /* --------------------------header----------------------------- */
@@ -189,17 +191,14 @@ body{
     background-color: rgba(240, 247, 249, 0.5);
 }
 .pop-a{
-    width: 110px;
+    width: 145px;
 }
 .pop-g{
-    width:150px;
+    width:195px;
 }
 
 /* --------------------------pop----------------------------- */
 
-h1{
-    font-size: 40px;
-}
 .main{
     padding-top: var(--header-height);
     height: 100vh;
@@ -326,6 +325,7 @@ h1{
     display: flex;
     justify-content: space-between;
     max-width: 990px;
+    padding:0 25px;
     margin:0 auto;
 }
 .how-step{
@@ -351,11 +351,6 @@ h1{
     width:200px;
 }
 
-
-.rank{
-    display: flex;
-    justify-content: center;
-}
 
 /* ------------------------------feature---------------------------- */
 .feature{
@@ -507,5 +502,292 @@ h1{
     margin:25px auto 0;
 }
 
+
+@media screen and (max-width:480px){
+    .wrapper{
+        min-width:365px;
+    }
+    .ttl-01{
+        font-size: 30px;
+        letter-spacing: 1%;
+    }
+    
+    .txt-basic{
+        font-size: 12px;
+        line-height: 160%;
+    }
+    .pop{
+        display: none;
+    }
+
+    .header {
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 55px;
+        padding: 0 20px;
+    }
+
+    .open-btn{
+        top: 15px;
+        right: 15px;
+        height: 22px;
+        width: 45px;
+    }
+    .open-btn span,
+    .open-btn span:before,
+    .open-btn span::after{
+        height: 2px;
+        width: 45px;
+    }
+    .open-btn span::before{
+        bottom: 11px;
+    }
+    .open-btn span::after{
+        top: 11px;
+    }
+
+
+    .close-btn{
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 30px;
+        right: 15px;
+    }
+    .close-btn > span::before,
+    .close-btn > span::after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 15px;
+    }
+
+    .menu-content {
+        transition: all 0.5s;
+        /* opacity: 0.6; */
+    }
+    .menu-content ul{
+        padding: 0 20px;
+        margin:  145px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .menu-txt{
+        font-size: 30px;
+        letter-spacing: 3%;
+        /* margin-bottom: 10px; */
+    }
+    .menu-link{
+        margin: 0;
+    }
+    .menu-subtxt{
+        font-size: 16px;
+        letter-spacing: 2%;
+    }
+    
+    /* --------------------------header----------------------------- */
+
+    /* --------main-------- */
+
+    .main{
+        padding: initial;
+        background-image: url(img/main-SP.png);
+        height:560px;
+    }
+    .main-txt{
+        display: none;
+        max-width:initial;
+        margin: -30px auto ;
+    }
+
+    /* ------concept------  */
+    .concept{
+        padding-top: 60px;
+    }
+    
+    .concept-ttl{
+        align-items: flex-end;
+        gap:3px;
+        font-size: 26px;
+    }
+    .concept-ttl img{
+        width:93px;
+    }
+    
+    .concept-img{
+        margin-bottom: 0px;
+    }
+    .concept-img img{
+        max-width: 345px;
+        height: 100%;
+    }
+    .concept-txt{
+        font-size: 16px;
+        line-height: 180%;
+        letter-spacing: 0.08em;
+    
+        padding:60px 15px 60px;
+    }
+    .concept-txt-aki{
+        margin:70px 0;
+    }
+    .concept-txt-big{
+        font-size: 17px;
+        margin-top:70px;
+    }
+
+    /* ------how------ */
+    .how{
+        scroll-margin-top: 0;
+        padding: 60px 15px;
+    }
+    .how-ttl{
+        margin: 0 auto;
+        padding: 0 0 40px;
+    }
+    .how-sub-ttl{
+        font-size: 11px;
+    }
+    .how-content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 345px;
+        padding:0;
+    }
+    .how-content li:nth-child(n+3){
+        margin-top: 30px;
+    }
+    .how-step{
+        margin-top: 0;
+        gap:5px;
+        /* font-size: 35px; */
+    }
+    .how-sub-txt{
+        font-size: 14px;
+    }
+    .how-img{
+        width:155px;
+    }
+
+    /* ------------------------------feature---------------------------- */
+    .feature{
+        background-image: url(img/feature-bg-Sp.png);
+        padding-bottom: 0;
+        padding: 60px 15px;
+    }
+    .feature h1{
+        padding: 0 0 30px;
+    }
+    .feature h2{
+        font-size: 20px;
+    }
+    .feature-ttl{
+        padding-bottom: 15px;
+        padding-left: 35px;
+    }
+    .feature-ttl img{
+        width:30px;
+    }
+    .feature-ttl span::before{
+        content: url(img/moviemark-SP.svg);
+        left:-35px;
+        top:50%;
+        transform: translateY(-50%);
+    }
+    .feature p{
+        max-width:315px;
+    }
+    .square{
+        width: 92%;
+        padding:30px 15px;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .feature-1{
+        gap: 15px;
+        border-radius: 10px 10px 10px 10px;
+    }
+    .feature-img1{
+        max-width:265px;    
+    }
+
+    .feature-2{
+        gap: 15px;
+        border-radius: 10px 10px 10px 10px;
+        margin-top: 30px;
+        flex-direction: column-reverse;
+    }
+    .feature-img2{
+        max-width:280px;    
+    }
+
+    .feature-3{
+        background-color: rgba(240, 247, 249, 0.4);
+        gap: 15px;
+        border-radius: 10px 10px 10px 10px;
+        margin-top:30px;
+    }
+    .feature-img3{
+        max-width: 290px;
+    }
+
+    /* ------------------------------feature---------------------------- */
+    
+    /* ------------------------------install---------------------------- */
+
+    .install{
+        padding:60px 15px;
+    }
+    .install-img{
+        margin: 0 auto 30px;
+        max-width:345px;
+    }
+
+    .apple img{
+        width:110px;
+    }
+    .google img{
+        width:150px;
+    }
+    .install-btn{
+        gap:15px;
+        margin: 0 auto;
+    }
+    .install h1{
+        font-size: 26px;
+    }
+    /* ------------------------------install---------------------------- */
+
+    .footer {
+        vertical-align: middle;
+        padding: 60px 0 160px;
+    }
+    .followus{
+        display: none;
+    }
+    
+    .sns-inner{
+        position: relative;
+        width: 100%;
+    }
+    .sns-inner::before{
+        content: url(img/footer-logo.svg);
+        position: absolute;
+        top:65px;
+        transform: translateX(-50%);
+        left:50%;
+        
+    }
+    .sns-img{
+        width:160px;
+        margin:0auto;
+    }
+    
+}
 
 
